@@ -1,0 +1,15 @@
+OASISFormat: 0.4
+Name:        opam-graphviz
+Version:     0.2
+Synopsis:    A graph representation of the opam universe, for visualisation purposes.
+Authors:     Gabriel Radanne <drupyog@zoho.com>
+License:     MIT
+Plugins:     META (0.3), DevFiles (0.3)
+
+BuildTools: ocamlbuild
+
+Executable "opam-graphviz"
+  Path: src
+  MainIs: opam_graphviz.ml
+  CompiledObject: best
+  BuildDepends: opam-lib.client
