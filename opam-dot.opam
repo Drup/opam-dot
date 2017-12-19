@@ -1,0 +1,21 @@
+opam-version: "2.0"
+name:         "pumping"
+maintainer:   "Gabriel Radanne <drupyog@zoho.com>"
+authors:      [ "Gabriel Radanne" ]
+homepage:     "https://github.com/Drup/opam-dot"
+bug-reports:  "https://github.com/Drup/opam-dot/issues"
+dev-repo:     "https://github.com/Drup/opam-dot.git"
+synopsis: "OPAM dependencies as graphs."
+license: "MIT"
+version: "dev"
+depends: ["ocaml"]
+available: opam-version >= "2.0.0~beta5"
+flags: plugin
+build: [
+  ["jbuilder" "build" "--only-packages" "pumping" "--root" "." "-j" jobs "@install"]
+]
+depends: [
+  "ocamlfind" {build}
+  "jbuilder" {build}
+  "opam-format"
+]

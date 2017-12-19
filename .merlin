@@ -1,7 +1,13 @@
-PKG opam-lib.client
-
-S src/*
-B _build/*
-
-FLG -w +A-4-6-9-40-42-44
-FLG -w -32-34-37
+B _build/default
+FLG -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -safe-string -keep-locs -short-paths -w -6-9+58+59
+PKG bigarray
+PKG bytes
+PKG ocamlgraph
+PKG opam-core
+PKG opam-file-format
+PKG opam-format
+PKG re
+PKG re.pcre
+PKG re.perl
+PKG re.posix
+PKG unix

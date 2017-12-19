@@ -1,0 +1,15 @@
+(jbuild_version 1)
+
+;; Library
+(executable
+ ((name opam-dot)
+  (public_name opam-dot)
+  (libraries (opam-format))
+  (modules opam-dot)
+  (flags (:standard
+          -safe-string
+          -keep-locs
+          -short-paths
+          -w -6-9+58+59
+  ))
+))
