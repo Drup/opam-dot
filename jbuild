@@ -2,10 +2,10 @@
 
 ;; Library
 (executable
- ((name opam-dot)
+ ((name opam_dot)
   (public_name opam-dot)
-  (libraries (opam-format))
-  (modules opam-dot)
+  (libraries (opam-state bos))
+  (modules opam_dot)
   (flags (:standard
           -safe-string
           -keep-locs

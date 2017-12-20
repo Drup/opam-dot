@@ -1,0 +1,10 @@
+lib: [
+  "_build/install/default/lib/opam-dot/META" {"META"}
+  "_build/install/default/lib/opam-dot/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/opam-dot" {"opam-dot"}
+]
+doc: [
+  "_build/install/default/doc/opam-dot/LICENSE"
+]

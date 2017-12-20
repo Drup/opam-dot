@@ -1,13 +1,23 @@
 B _build/default
 FLG -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -safe-string -keep-locs -short-paths -w -6-9+58+59
+PKG astring
 PKG bigarray
+PKG bos
 PKG bytes
+PKG fmt
+PKG fpath
+PKG logs
 PKG ocamlgraph
 PKG opam-core
 PKG opam-file-format
 PKG opam-format
+PKG opam-repository
+PKG opam-state
 PKG re
 PKG re.pcre
 PKG re.perl
 PKG re.posix
+PKG result
+PKG rresult
+PKG uchar
 PKG unix
