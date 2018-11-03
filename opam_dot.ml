@@ -16,10 +16,10 @@ module E = struct
   let compare = compare
   let default = false, Empty
   let to_string ((_, fml) : t) =
-    Ofml.string_of_formula (fun (_rel, v) ->
-      Printf.sprintf "OP %s"
-        (* (Ofml.string_of_relop rel) *)
-        (Opkg.Version.to_string v)) fml
+    Ofml.string_of_formula (fun (rel, v) ->
+        Printf.sprintf "%s %s"
+          (OpamPrinter.relop rel)
+          (Opkg.Version.to_string v)) fml
 end
 
 module G = Graph.Persistent.Digraph.ConcreteLabeled(V)(E)
@@ -39,9 +39,9 @@ module Dot =
     ]
     let edge_attributes (_src, fml, _dest) = match fml with
       | opt, _fml ->
-        (* `Label (E.to_string fml) :: *)
-          if not opt then common_attribs
-          else `Color 0x999999 :: `Style `Dashed :: common_attribs
+        `Label (E.to_string fml) ::
+        if not opt then common_attribs
+        else `Color 0x999999 :: `Style `Dashed :: common_attribs
 
     let vertex_name v =
       "\""^Opkg.name_to_string v^"\""

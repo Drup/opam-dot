@@ -15,5 +15,6 @@ build: [
 depends: [
   "ocamlfind" {build}
   "jbuilder" {build}
-  "opam-state" "bos"
+  "opam-state" {>= "2.0.1"}
+  "bos"
 ]

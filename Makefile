@@ -1,10 +1,10 @@
 all:
-	jbuilder build @install --dev
+	dune build
 
 test:
-	jbuilder build @runtest --dev
+	dune build @runtest
 
 clean:
-	rm -rf _build
+	dune clean
 
 .PHONY: all test clean

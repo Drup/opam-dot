@@ -5,3 +5,4 @@ setup.data
 setup.exe
 setup.log
 *.install
+.merlin

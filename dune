@@ -1,0 +1,13 @@
+(executable
+ (name opam_dot)
+ (public_name opam-dot)
+ (libraries opam-state bos)
+ (modules opam_dot)
+ (flags
+   :standard
+   -safe-string
+   -keep-locs
+   -short-paths
+   -w -6-9+58+59
+ )
+)
